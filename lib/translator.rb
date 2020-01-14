@@ -23,9 +23,9 @@ end
 
 def get_english_meaning(file,emo)
   dict = load_library(file)
-  dict[:get_emoticon].each {
-    if dict[:get_emoticon][emo]
-      return dict[:get_emoticon][emo]
+  dict[:get_meaning].each {
+    if dict[:get_meaning][emo]
+      return dict[:get_meaning][emo]
     end
   }
   return "Sorry, that emoticon was not found"
