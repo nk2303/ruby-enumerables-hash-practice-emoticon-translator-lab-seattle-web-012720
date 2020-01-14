@@ -21,11 +21,11 @@ def get_japanese_emoticon(file, emo)
   return "Sorry, that emoticon was not found"
 end
 
-def get_english_meaning
+def get_english_meaning(file,emo)
   dict = load_library(file)
-  dict[:get_meaning].each {|end_emo,jap_emo| 
-    if dict[:get_meaning].include?(jap_emo)
-      return eng_emo
+  dict[:get_emoticon].each {
+    if dict[:get_emoticon][emo]
+      return dict[:get_emoticon][emo]
     end
   }
   return "Sorry, that emoticon was not found"
